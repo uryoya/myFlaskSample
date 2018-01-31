@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Top page</title>
+</head>
+<body>
+{% if signined %}
+	<a href="{{ url_for('signout') }}">signout</a>
+	<p>あなたは{{ username }}としてサインインしています。</p>
+{% else %}
+	<a href="{{ url_for('signin') }}">signin</a>
+	<p>サインインが必要です</p>
+{% endif %}
+</body>
+</html>
